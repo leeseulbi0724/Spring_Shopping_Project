@@ -5,6 +5,13 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style>
+	.footer {
+		background-color:lightgray;
+		width:100%;
+		height:300px;
+	}
+</style>
 </head>
 <body>
 <footer>

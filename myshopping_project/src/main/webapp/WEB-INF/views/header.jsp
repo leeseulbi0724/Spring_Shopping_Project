@@ -38,6 +38,8 @@
 		display:inline-block;
 		font-size:13px; 
 		padding:7px 5px; 
+		margin-top:5px;
+		margin-bottom:-3px;
 	}
 	.menu ul>li {
 		display:inline-block;
@@ -60,7 +62,7 @@
 		height:500px; 
 		display:none;
 		position:absolute;
-		margin-top:9px;
+		margin-top:12px;
 		border:1px solid; 
 	}
 	
@@ -132,7 +134,7 @@
 					<ul>
 						<li><a href="index.do"><img src="http://localhost:9000/myshop/images/home.png" class="home"></a></li>
 						<li><a href="login.do">로그인</a></li>
-						<li><a href="#">회원가입</a></li>
+						<li><a href="join.do">회원가입</a></li>
 						<li><a href="#"><b>공지사항</b></a></li>
 						<li><a href="#"><b>EVENT</b></a></li>
 					</ul>

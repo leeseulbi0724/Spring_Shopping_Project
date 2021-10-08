@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="shortcut icon" type="image⁄x-icon" href="http://localhost:9000/myshop/images/pink.png">
+<link rel="shortcut icon" type="image⁄x-icon" href="http://localhost:9000/myshopping/images/pink.png">
 <title>로그인 | 워너비슈</title>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
@@ -61,6 +61,8 @@
 	}
 </style>
 <body>
+<jsp:include page="../header.jsp"></jsp:include>
+
 <section class="background">
 	<div class="back_div">
 		<p>LOGIN</p>
@@ -69,8 +71,11 @@
 		<button class="login">로그인</button>
 		<a href="#" class="find">아이디 찾기</a>
 		<a href="#" class="find">비밀번호 찾기</a>
-		<a href="#" class="join">회원가입</a>
+		<a href="join.do" class="join">회원가입</a>
 	</div>
 </section>
+
+<jsp:include page="../footer.jsp"></jsp:include>
+
 </body>
 </html>
