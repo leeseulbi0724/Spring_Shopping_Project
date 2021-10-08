@@ -19,10 +19,6 @@
 		margin:100px;
 		text-align:center;
 	}
-	.back_div>p {
-		font-size:30px;
-		margin-bottom:30px;
-	}
 	.back_div div.info, .add {
 		margin:50px 0;
 	}
@@ -76,7 +72,6 @@
 
 <section class="background">
 	<div class="back_div">
-		<p>회원가입</p>
 		<form>
 			<div class="info">
 				<ul>
