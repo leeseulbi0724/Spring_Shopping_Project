@@ -65,12 +65,41 @@
 	}
 	.menu_ul a { text-decoration:none; }
 	
-	.info_div, .ing_div, .latest_div {
+	.info_div {
 		display:inline-block;
 		border:1px solid lightgray;
 		width:1100px; height:300px;
 		float:left;
 		margin-bottom:30px;
+	}
+	
+	.ing_div , .latest_div {
+		display:inline-block;
+		width:1100px; height:250px;
+		float:left;
+		margin-bottom:30px;
+	}
+	.ing_div_title, .latest_div_title {
+		font-weight:bold;
+		text-align:left;
+		font-size:18px;
+	}
+	.ing_div_box, .latest_div_box {
+		border:1px solid lightgray;
+		width:100%; height:200px;
+		margin-top:10px;
+	}
+	.latest_div_title span {
+		color:gray; font-size:13px;
+		font-weight:normal;
+		margin-left:10px;
+	}
+	.latest_div_title a {
+		text-decoration:none;
+		color:gray;
+		float:right;
+		font-size:13px;
+		font-weight:normal;
 	}
 </style>
 <body>
@@ -93,7 +122,7 @@
 				<a href="#"><li>주문목록/배송조회</li></a>
 				<a href="#"><li>취소/반품/교환 내역</li></a>
 				<a href="#"><li>환불/입금 내역</li></a>
-				<a href="#"><li>장바구니</li></a>
+				<a href="mypage_basket.do"><li>장바구니</li></a>
 				<a href="#"><li>찜리스트</li></a>
 			</ul>
 			
@@ -128,11 +157,15 @@
 		</div>
 		
 		<div class="ing_div">
-			
+			<div class="ing_div_title">진행 중인 주문</div>
+			<div class="ing_div_box">
+				
+			</div>
 		</div>
 		
 		<div class="latest_div">
-			
+			<div class="latest_div_title"> 최근 주문 정보<span>최근 30일 내에 주문하신 내역입니다.</span><a href="#">더보기 ▶</a></div>
+			<div class="latest_div_box">
 		</div>
 		
 		
