@@ -10,6 +10,25 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
 </head>
 <style>
+	.title_bar {
+		background-color:rgb(252,252,252);
+		width:100%;
+		height:30px;
+		border-bottom:1px solid lightgray;
+		text-align:center;
+	}
+	.title_bar>div {
+		display:inline-block;
+		width:1400px;
+		text-align:right;
+		font-size:12px;
+	}
+	.title_bar>div a {
+		text-decoration:none;
+		color:black;
+	}
+	.title_bar>div a:hover { text-decoration:underline; }
+	
 	.background {
 		text-align:center;
 	}
@@ -69,6 +88,12 @@
 </style>
 <body>
 <jsp:include page="../header.jsp"></jsp:include>
+
+<section class="title_bar">
+	<div>
+		<p><a href="index.do">HOME</a> > <a href="join.do">회원가입</a>
+	</div>
+</section>
 
 <section class="background">
 	<div class="back_div">

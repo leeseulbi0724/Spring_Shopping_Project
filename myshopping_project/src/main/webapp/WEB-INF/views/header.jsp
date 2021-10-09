@@ -114,10 +114,10 @@
 	
 	$(document).ready(function() {
 		$(".menu_img").hover(function() {					
-			$(this).attr("src", "http://localhost:9000/myshop/images/menu_black.png");	
+			$(this).attr("src", "http://localhost:9000/myshopping/images/menu_black.png");	
 			$(".detail").css("display","block");
 		}, function() {
-			$(this).attr("src", "http://localhost:9000/myshop/images/menu_white.png");	
+			$(this).attr("src", "http://localhost:9000/myshopping/images/menu_white.png");	
 			$(".detail").css("display","none");
 		});
 	});
@@ -132,7 +132,7 @@
 			<div class="my_div">
 				<div class="my">
 					<ul>
-						<li><a href="index.do"><img src="http://localhost:9000/myshop/images/home.png" class="home"></a></li>
+						<li><a href="index.do"><img src="http://localhost:9000/myshopping/images/home.png" class="home"></a></li>
 						<li><a href="login.do">로그인</a></li>
 						<li><a href="join.do">회원가입</a></li>
 						<li><a href="#"><b>공지사항</b></a></li>
@@ -156,7 +156,7 @@
 			<div class="menu_div">
 				<div class="menu">
 					<div class="menu_img_div">
-						<img src="http://localhost:9000/myshop/images/menu_white.png" class="menu_img">
+						<img src="http://localhost:9000/myshopping/images/menu_white.png" class="menu_img">
 					</div>
 					<div class="menu_ul_div">
 						<ul>						
