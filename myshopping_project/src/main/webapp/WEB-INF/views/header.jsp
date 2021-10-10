@@ -160,7 +160,7 @@
 					</div>
 					<div class="menu_ul_div">
 						<ul>						
-							<li><a href="#">베스트</a></li>
+							<li><a href="prod_main.do">베스트</a></li>
 							<li><a href="#">신상품</a></li>
 							<li><a href="#">SALE</a></li>
 							<li><a href="#">뮬/블로퍼</a></li>
