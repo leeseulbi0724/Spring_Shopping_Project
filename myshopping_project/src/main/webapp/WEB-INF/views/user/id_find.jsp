@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="shortcut icon" type="image⁄x-icon" href="http://localhost:9000/myshopping/images/pink.png">
-<title>로그인 | 워너비슈</title>
+<title>아이디 찾기 | 워너비슈</title>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
 </head>
@@ -33,50 +33,44 @@
 		text-align:center;
 	}
 	.back_div {
-		width:400px;
-		height:500px;
+		width:1000px;
 		display:inline-block;
 		margin:100px;
 		text-align:center;
 	}
-	.back_div>p {
-		font-size:30px;
-		margin-bottom:30px;
-	}
-	.back_div>input {
-		width:100%;
-		margin-bottom:10px;
-		border:none;
-		border-bottom:1px solid lightgray;
+	
+	.find_box {
+		border:1px solid lightgray;
+		border-radius:5px;
+		width:400px;
+		height:350px;
 		display:inline-block;
-		font-size:15px;
+		text-align:center;
 	}
-	.back_div>button.login {
+	.find_box>p {
+		font-weight:bold;
+		font-size:16px;
+		margin:20px;
+	}
+	.find_box>div {
+		font-size:14px;
+	}
+	.find_box>div>input:first-child { margin-left:20px; }
+	.find_box>div>input:nth-child(2) { margin-left:10px; }
+	.find_box ul { list-style:none; text-align:left; display:inline-block; }
+	.find_box ul:nth-child(3) { margin-top:40px; }
+	.find_box ul>li { display:inline-block; }
+	.find_box ul>li>label { width:80px; }
+	.find_box ul>li>input { font-size:14px; height:30px; margin-bottom:10px; }
+	
+	.find_box button {
 		background-color:black;
-		padding:10px 30px;
 		color:white;
-		width:100%;
-		margin:10px 0;
+		width:200px;
+		height:50px;
 		border:none;
-	}
-	.back_div>a.find {
-		text-decoration:none;
-		color:black;
-		padding:10px 30px;
-		font-size:15px;
-	}
-	.back_div>a.find:hover {
-		color:gray;
-	}
-	.back_div>a.join {
-		background-color:gray;
-		padding:10px 30px;
-		color:white;
-		width:100%;
-		margin:10px 0;
-		border:none;
-		text-decoration:none;
-		display:block;
+		border-radius:4px;
+		margin-top:45px;
 	}
 </style>
 <body>
@@ -84,23 +78,31 @@
 
 <section class="title_bar">
 	<div>
-		<p><a href="index.do">HOME</a> > <a href="login.do">로그인</a>
+		<p><a href="index.do">HOME</a> > <a href="id_find.do">아이디 찾기</a>
 	</div>
 </section>
 
 <section class="background">
 	<div class="back_div">
-		<p>LOGIN</p>
-		<input type="text" class="form-control" placeholder="아이디">
-		<input type="text" class="form-control" placeholder="비밀번호">
-		<button class="login">로그인</button>
-		<a href="#" class="find">아이디 찾기</a>
-		<a href="#" class="find">비밀번호 찾기</a>
-		<a href="join.do" class="join">회원가입</a>
+		<div class="find_box">
+			<p>아이디 찾기</p>
+			<div>
+				<input type="radio" name="option"> 이메일
+				<input type="radio" name="option"> 휴대폰 번호
+				<ul>
+					<li><label>이름</label></li>
+					<li><input type="text" class="form-control">
+				</ul>
+				<ul>
+					<li><label>이메일</label></li>
+					<li><input type="text" class="form-control">
+				</ul>
+				<button>확인</button>
+			</div>
+		</div>
 	</div>
 </section>
 
 <jsp:include page="../footer.jsp"></jsp:include>
-
 </body>
 </html>
