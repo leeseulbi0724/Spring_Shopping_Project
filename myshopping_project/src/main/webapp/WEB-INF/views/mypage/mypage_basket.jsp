@@ -134,7 +134,7 @@
 			  </thead>
 			  <tbody>
 			    <tr>
-			      <th><input type="checkbox"></th>
+			      <td><input type="checkbox"></td>
 			      <td><img src="http://localhost:9000/myshopping/images/demo.jpg" ></td>
 			      <td class="상품명">디바 스퀘어토 기모 앵클부츠 (5cm) <br><span>[ 옵션 : 블랙(black)/240 ]</span></td>
 			      <td class="판매가">12,900원</td>
