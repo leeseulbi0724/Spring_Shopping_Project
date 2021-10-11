@@ -62,7 +62,7 @@
 		border-top:1px solid lightgray;
 		vertical-align:middle;
 	}
-	.table img {
+	.table img.prod_img {
 		width:100%; hieght:100%; vertical-align:middle;
 	}
 	.table tbody { font-size:14px; }
@@ -135,11 +135,11 @@
 			  <tbody>
 			    <tr>
 			      <td><input type="checkbox"></td>
-			      <td><img src="http://localhost:9000/myshopping/images/demo.jpg" ></td>
+			      <td><img src="http://localhost:9000/myshopping/images/demo.jpg"  class="prod_img"></td>
 			      <td class="상품명">디바 스퀘어토 기모 앵클부츠 (5cm) <br><span>[ 옵션 : 블랙(black)/240 ]</span></td>
 			      <td class="판매가">12,900원</td>
 			      <td>1</td>
-			      <td>129원</td>
+			      <td><img src="http://localhost:9000/myshopping/images/point_icon.gif"> 129원</td>
 			      <td>무료</td>
 			      <td>12,900원</td>
 			      <td>
@@ -153,11 +153,11 @@
 			    
 			    <tr>
 			      <th><input type="checkbox"></th>
-			      <td><img src="http://localhost:9000/myshopping/images/demo.jpg" ></td>
+			      <td><img src="http://localhost:9000/myshopping/images/demo.jpg"  class="prod_img"></td>
 			      <td class="상품명">디바 스퀘어토 기모 앵클부츠 (5cm) <br><span>[ 옵션 : 블랙(black)/240 ]</span></td>
 			      <td class="판매가">12,900원</td>
 			      <td>1</td>
-			      <td>129원</td>
+			      <td><img src="http://localhost:9000/myshopping/images/point_icon.gif"> 129원</td>
 			      <td>무료</td>
 			      <td>12,900원</td>
 			      <td>

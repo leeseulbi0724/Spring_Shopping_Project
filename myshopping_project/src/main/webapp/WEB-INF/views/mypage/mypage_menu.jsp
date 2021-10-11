@@ -42,7 +42,7 @@
 				<li>쇼핑정보</li>
 			</ul>
 			<ul class="menu_ul">
-				<a href="#"><li>주문목록/배송조회</li></a>
+				<a href="mypage_order.do" class="order"><li>주문목록/배송조회</li></a>
 				<a href="#"><li>취소/반품/교환 내역</li></a>
 				<a href="#"><li>환불/입금 내역</li></a>
 				<a href="mypage_basket.do"><li>장바구니</li></a>

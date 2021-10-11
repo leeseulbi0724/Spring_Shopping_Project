@@ -23,5 +23,11 @@ public class MypageController {
 	public String mypage_coupon() {
 		return "mypage/mypage_coupon";
 	}
+	
+	//마이페이지 주문조회/배송조회 화면
+	@RequestMapping(value="/mypage_order.do")
+	public String mypage_order() {
+		return "mypage/mypage_order";
+	}
 
 }
