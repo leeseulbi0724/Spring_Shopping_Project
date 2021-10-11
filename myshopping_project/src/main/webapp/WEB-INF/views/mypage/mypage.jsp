@@ -35,47 +35,37 @@
 	.back_div {
 		width:1400px;
 		display:inline-block;
-		margin:100px;
-	}
-	.left_div {
-		display:inline-block;
-		width:250px;
-		height:1000px;
-		float:left;
-		text-align:left;
-	}
-	.left_div>p {
-		font-weight:bold;
-		font-size:23px;
-	}
-	.left_div ul { list-style:none; }
-	.title_ul {
-		margin-top:30px;
-		font-size:18px;
-		font-weight:bold;
-		border-bottom:1px solid;
-		width:100px;
-		padding:10px 0;
-		margin-bottom:10px;
-	}
-	.menu_ul li {
-		margin:5px 0;
-		color:gray;
-		font-size:15px;
-	}
-	.menu_ul a { text-decoration:none; }
+		margin:100px 0 0 50px;
+	}	
 	
 	.info_div {
 		display:inline-block;
 		border:1px solid lightgray;
-		width:1100px; height:300px;
+		width:900px; height:300px;
 		float:left;
 		margin-bottom:30px;
 	}
+	.info_text, .info_img, .line { display:inline-block; }
+	.info_text {
+		float:left;
+		margin-top:110px;
+		text-align:left;
+		margin-left:20px;
+	}
+	.info_text p { margin-bottom:10px; }
+	.info_text span { font-size:17px; font-weight:bold; }
+	.info_text a { text-decoration:none; border:1px solid lightgray; color:black; font-size:13px; padding:5px 10px; }
+	
+	.info_img { float:right; margin-top:100px; }
+	.info_img .coupon, .bank { display:inline-block; padding:0 50px; }
+	.info_img div>img { width:50px; height:50px; } 
+	.info_img a { text-decoration:none; color:black; }
+	
+	.line { border-left:1px solid lightgray; width:1px; height:95px; margin:0 10px;  }
 	
 	.ing_div , .latest_div {
 		display:inline-block;
-		width:1100px; height:250px;
+		width:900px; height:250px;
 		float:left;
 		margin-bottom:30px;
 	}
@@ -113,47 +103,28 @@
 
 <section class="background">
 	<div class="back_div">
-		<div class="left_div">
-			<p>마이페이지</p>
-			<ul class="title_ul">
-				<li>쇼핑정보</li>
-			</ul>
-			<ul class="menu_ul">
-				<a href="#"><li>주문목록/배송조회</li></a>
-				<a href="#"><li>취소/반품/교환 내역</li></a>
-				<a href="#"><li>환불/입금 내역</li></a>
-				<a href="mypage_basket.do"><li>장바구니</li></a>
-				<a href="#"><li>찜리스트</li></a>
-			</ul>
-			
-			<ul class="title_ul">
-				<li>혜택관리</li>
-			</ul>
-			<ul class="menu_ul">
-				<a href="#"><li>쿠폰</li></a>
-				<a href="#"><li>적립금</li></a>
-			</ul>
-			
-			<ul class="title_ul">
-				<li>고객센터</li>
-			</ul>
-			<ul class="menu_ul">
-				<a href="#"><li>1:1 문의</li></a>
-			</ul>
-			
-			<ul class="title_ul">
-				<li>회원정보</li>
-			</ul>
-			<ul class="menu_ul">
-				<a href="#"><li>개인정보수정</li></a>
-				<a href="#"><li>비밀번호변경</li></a>
-				<a href="#"><li>배송지관리</li></a>
-				<a href="#"><li>회원탈퇴</li></a>
-			</ul>			
-		</div>
+	<jsp:include page="mypage_menu.jsp"></jsp:include>
 		
 		<div class="info_div">
-			
+			<div class="info_text">
+				<p>이슬비님의<br><span>회원등급은 일반회원등급 입니다.</span></p>
+				<a href="#">등급혜택보기</a>
+			</div>
+			<div class="info_img">
+			 	<a href="mypage_coupon.do">
+					<div class="coupon">
+						<img src="http://localhost:9000/myshopping/images/coupon.png">
+						<p><strong>쿠폰<br>0</strong>장</p>
+					</div>
+				</a>
+				<div class="line"></div>
+				<a href="#">
+					<div class="bank">
+						<img src="http://localhost:9000/myshopping/images/bank.png">
+						<p><strong>적립금<br>0</strong>원</p>
+					</div>
+				</a>
+			</div>
 		</div>
 		
 		<div class="ing_div">

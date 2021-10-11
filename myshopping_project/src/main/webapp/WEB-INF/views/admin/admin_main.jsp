@@ -20,14 +20,14 @@
 	.title {
 		background-color:rgb(34,34,34);
 		color:white;
-		width:1903px;
+		width:100%;
 		text-align:center;
 		font-size:13px;
 	}
 	.left>div { margin-top:20px; }
 	.left {
-		width:200px;
-		height:950px;
+		width:15%;
+		height:100vh;
 		background-color:rgb(34,34,34);
 		display:inline-block;
 		float:left;
@@ -49,8 +49,8 @@
 	}
 	.main {
 		background-color:rgb(238,238,238);
-		width:1703px;
-		height:950px;
+		width:85%;
+		height:100vh;
 		display:inline-block;
 		float:left;
 	}
@@ -65,13 +65,14 @@
 	
 	.판매진행현황 {
 		background-color:white;
-		width:800px; height:400px;
+		width:50%; height:400px;
 		margin:40px 10px 10px 50px;
 		float:left; text-align:center;
+		border:1px solid lightgray;
 	}
 	.판매진행현황_one {
 		display:inline-block;
-		width:130px; height:130px;
+		width:22%; height:130px;
 		border-radius:100px;
 		text-align:center;
 		vertical-align:middle;
@@ -94,32 +95,34 @@
 	
 	.판매실적 {
 		background-color:white;
-		width:800px; height:250px;
+		width:40%; height:250px;
 		float:left;
 		margin:40px 0 10px 10px;
 		text-align:center;
+		border:1px solid lightgray;
 	}
 	.판매실적_box {
 		border:1px solid lightgray; 
-		width:190px; height:200px;
+		width:30%; height:190px;
 		display:inline-block;
 		float:left;
-		margin:10px 0;
+		margin:15px 1%;
 	}
-	.판매실적_box:nth-child(2) { margin-left:20px; }
+	.판매실적_box:nth-child(2) { margin-left:3%; }
 		
 	.클레임현황 {
 		background-color:white;
-		width:800px; height:150px;
+		width:50%; height:150px;
 		float:left;
 		margin:10px 10px 10px 50px;
 		text-align:center;
+		border:1px solid lightgray;
 	}
 	.클레임현황_box {
-		width:230px; height:100px;
+		width:31%; height:100px;
 		border:1px solid lightgray;
 		display:inline-block;
-		margin:10px;
+		margin:10px 0;
 	}
 	.클레임현황_box p { margin-top:35px; display:inline-block; color:rgb(53,132,172); font-weight:bold; }
 	.클레임현황_box div { 
@@ -135,15 +138,10 @@
 	
 	.고객문의현황 {
 		background-color:white;
-		width:800px; height:395px;
+		width:40%; height:295px;
 		float:left;
 		margin:-135px 0 10px 10px;
-	}
-	.공지사항 {
-		background-color:white;
-		width:800px; height:300px;
-		margin:-85px 10px 0 50px;
-		float:left;
+		border:1px solid lightgray;
 	}
 </style>
 </head>
@@ -180,7 +178,6 @@
 			<div class="판매실적_box"></div>
 			<div class="판매실적_box"></div>
 			<div class="판매실적_box"></div>
-			<div class="판매실적_box"></div>
 		</div>
 		<div class="클레임현황">
 			<div style="text-align:left; background-color:rgb(249,249,249); ">
@@ -193,11 +190,6 @@
 		<div class="고객문의현황">
 			<div style="text-align:left; background-color:rgb(249,249,249); ">
 				<img src="http://localhost:9000/myshopping/images/four.png"  width="10px" height="10px">고객 문의 현황
-			</div>
-		</div>
-		<div class="공지사항">
-			<div style="text-align:left; background-color:rgb(249,249,249); ">
-				<img src="http://localhost:9000/myshopping/images/three.png"  width="10px" height="10px">공지사항
 			</div>
 		</div>
 	</div>

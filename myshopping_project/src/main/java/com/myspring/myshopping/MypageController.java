@@ -17,5 +17,11 @@ public class MypageController {
 	public String mypage_basket() {
 		return "mypage/mypage_basket";
 	}
+	
+	//마이페이지 쿠폰화면
+	@RequestMapping(value="/mypage_coupon.do")
+	public String mypage_coupon() {
+		return "mypage/mypage_coupon";
+	}
 
 }
