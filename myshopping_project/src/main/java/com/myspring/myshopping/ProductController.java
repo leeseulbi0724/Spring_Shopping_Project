@@ -17,5 +17,11 @@ public class ProductController {
 	public String prod_detail() {
 		return "product/prod_detail";
 	}
+	
+	//상품 구매페이지
+	@RequestMapping(value="/prod_buy.do")
+	public String prod_buy() {
+		return "product/prod_buy";
+	}
 
 }

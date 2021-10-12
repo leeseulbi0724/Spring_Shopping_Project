@@ -8,118 +8,9 @@
 <title>워너비슈</title>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
+<link href="http://localhost:9000/myshopping/css/commons.css" rel="stylesheet">
+<link href="http://localhost:9000/myshopping/css/product/prod_detail.css" rel="stylesheet">
 </head>
-<style>
-	.title_bar {
-		background-color:rgb(252,252,252);
-		width:100%;
-		height:30px;
-		border-bottom:1px solid lightgray;
-		text-align:center;
-	}
-	.title_bar>div {
-		display:inline-block;
-		width:1400px;
-		text-align:right;
-		font-size:12px;
-	}
-	.title_bar>div a {
-		text-decoration:none;
-		color:black;
-	}
-	.title_bar>div a:hover { text-decoration:underline; }
-	
-	.background {
-		text-align:center;
-	}
-	.back_div {
-		width:1300px;
-		display:inline-block;
-		margin:100px;
-	}
-	
-	.prod_info_div { width:100%; display:inline-block; }
-	.info_img {
-		display:inline-block;
-		float:left;
-	}
-	.info_text {
-		width:600px;
-		float:left;
-		display:inline-block;
-		float:right;
-		border-top:2px solid;
-	}
-	.info_name {
-		text-align:left;
-		padding:10px;
-		border-bottom:1px solid lightgray;
-	}
-	.info_price, .info_option {
-		text-align:left;
-		font-size:13px;
-		border-bottom:1px solid lightgray;
-	}
-	.info_price ul { 
-		list-style:none; display:inline-block;	
-		margin:10px 70px 10px 0;
-		padding:0;
-	}
-	.info_option ul {
-		list-style:none; display:inline-block;	
-		margin:10px 55px 10px 0; padding:0;
-	}
-	.info_price li, .info_option li { margin:10px; }	
-	.info_option select {
-		font-size:11px;
-		width:350px; height:30px; 
-		vertical-align:middle;
-	}
-	.info_order { border-bottom:1px solid lightgray; }
-	.info_order p {
-		font-size:12px; 
-		text-align:left;
-		color:gray;
-		margin:10px;
-	}
-	.info_order table { font-size:12px; }
-	.info_order thead {
-		background-color:rgb(255,255,255);
-		border-bottom:1px solid lightgray;
-	}
-	.info_order th { border:1px solid lightgray; border-bottom:none; }
-	.info_order tbody { border-bottom:1px solid lightgray; }
-	.info_order div {
-		text-align:right;
-		margin-bottom:15px;
-		font-size:14px;
-	}
-	.info_order strong { font-size:18px; }
-	.info_order span { color:gray; font-size:13px; }
-	.button_div { margin-top:20px; }
-	
-	.바로구매 {
-		border:none;
-		background-color:black;
-		color:white;
-		width:200px; height:60px; 
-		border-radius:4px;
-	}
-	.장바구니, .관심상품 {
-		border:1px solid lightgray;
-		background-color:white;
-		border-radius:4px;
-		width:150px; height:60px;
-	}
-	
-	.prod_recom_div {
-		margin-top:20px;
-		border-top:1px solid lightgray;
-		border-bottom:1px solid lightgray;
-		padding:20px;
-		font-size:14px;
-	}
-</style>
 <body>
 <jsp:include page="../header.jsp"></jsp:include>
 
@@ -198,7 +89,7 @@
 					<div>TOTAL : <strong>17,900원</strong><span> (1개)</span></div>
 				</div>
 				<div class="button_div">
-					<button class="바로구매">바로구매</button>
+					<button class="바로구매"  onclick="location.href='prod_buy.do' ">바로구매</button>
 					<button class="장바구니">장바구니</button>
 					<button class="관심상품">관심상품</button>
 				</div>

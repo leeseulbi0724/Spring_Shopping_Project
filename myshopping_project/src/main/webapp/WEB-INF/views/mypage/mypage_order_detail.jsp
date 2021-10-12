@@ -8,69 +8,9 @@
 <title>주문조회/배송조회 | 워너비슈</title>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
+<link href="http://localhost:9000/myshopping/css/commons.css" rel="stylesheet">
+<link href="http://localhost:9000/myshopping/css/mypage/mypage_order_detail.css" rel="stylesheet">
 </head>
-<style>
-	.order { font-weight:bold; }
-	
-	.title_bar {
-		background-color:rgb(252,252,252);
-		width:100%;
-		height:30px;
-		border-bottom:1px solid lightgray;
-		text-align:center;
-	}
-	.title_bar>div {
-		display:inline-block;
-		width:1400px;
-		text-align:right;
-		font-size:12px;
-	}
-	.title_bar>div a {
-		text-decoration:none;
-		color:black;
-	}
-	.title_bar>div a:hover { text-decoration:underline; }
-	
-	.background {
-		text-align:center;
-	}
-	.back_div {
-		width:1400px;
-		display:inline-block;
-		margin:100px 0 0 50px;
-	}	
-	
-	.main_div {
-		display:inline-block;
-		width:900px; 
-		float:left;
-		margin-bottom:30px;
-	}
-	.main_div>p {
-		font-weight:bold; font-size:17px;
-		text-align:left;
-		margin-bottom:5px; 
-	}
-	
-	.주문정보 {
-		border-top:1px solid lightgray;
-		width:100%; text-align:left;
-		margin-bottom:30px;
-	}
-	.결제정보 { width:100%; text-align:left; margin-bottom:30px; }
-	.주문상품정보 { width:100%; text-align:left; }
-	.주문정보>p, .결제정보>p, .주문상품정보>p { font-weight:bold; font-size:14px; margin:10px 5px; }
-	.주문정보>table, .결제정보>table, .주문상품정보>table { font-size:14px; }
-	.주문정보>table th, .결제정보>table th { font-weight:normal; border:1px solid lightgray; padding:10px; }
-	.주문정보>table th:first-child, .결제정보>table th:first-child { background-color:rgb(250,250,250); width:200px; }
-	.주문정보>table th>button { border:1px solid gray; background-color:white; font-size:12px; margin-left:5px; }
-	
-	.주문상품정보 table { text-align:center; }
-	.주문상품정보 th { background-color:rgb(250,250,250); border:1px solid lightgray; font-weight:normal; }
-	.주문상품정보 th>img { vertical-align:middle; }
-	.주문상품정보 td { vertical-align:middle; }
-	.주문상품정보 tr { border:1px solid lightgray; }
-</style>
 <body>
 <jsp:include page="../header.jsp"></jsp:include>
 

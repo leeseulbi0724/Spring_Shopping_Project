@@ -5,36 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link href="http://localhost:9000/myshopping/css/mypage/mypage_menu.css" rel="stylesheet">
 </head>
-<style>
-	.left_div {
-		display:inline-block;
-		width:250px;
-		height:1000px;
-		float:left;
-		text-align:left;
-		margin-left:100px;
-	}
-	.left_div>p {
-		font-weight:bold;
-		font-size:23px;
-	}
-	.left_div ul { list-style:none; }
-	.title_ul {
-		margin-top:30px;
-		font-size:18px;
-		font-weight:bold;
-		border-bottom:1px solid;
-		width:100px;
-		padding:10px 0;
-		margin-bottom:10px;
-	}
-	.menu_ul li {
-		margin:5px 0;
-		font-size:15px;
-	}
-	.menu_ul a { text-decoration:none; color:gray; }
-</style>
 <body>
 		<div class="left_div">
 			<p>마이페이지</p>

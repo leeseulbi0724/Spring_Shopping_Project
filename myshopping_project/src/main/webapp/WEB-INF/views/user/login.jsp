@@ -8,34 +8,12 @@
 <title>로그인 | 워너비슈</title>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
+<link href="http://localhost:9000/myshopping/css/commons.css" rel="stylesheet">
 </head>
-<style>
-	.title_bar {
-		background-color:rgb(252,252,252);
-		width:100%;
-		height:30px;
-		border-bottom:1px solid lightgray;
-		text-align:center;
-	}
-	.title_bar>div {
-		display:inline-block;
-		width:1400px;
-		text-align:right;
-		font-size:12px;
-	}
-	.title_bar>div a {
-		text-decoration:none;
-		color:black;
-	}
-	.title_bar>div a:hover { text-decoration:underline; }
-	
-	.background {
-		text-align:center;
-	}
+<style>	
 	.back_div {
 		width:400px;
-		height:500px;
-		display:inline-block;
+		height:500px;		
 		margin:100px;
 		text-align:center;
 	}

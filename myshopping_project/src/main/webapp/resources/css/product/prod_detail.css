@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+	.back_div { width:1300px; margin:100px; }
+	
+	.prod_info_div { width:100%; display:inline-block; }
+	.info_img {
+		display:inline-block;
+		float:left;
+	}
+	.info_text {
+		width:600px;
+		float:left;
+		display:inline-block;
+		float:right;
+		border-top:2px solid;
+	}
+	.info_name {
+		text-align:left;
+		padding:10px;
+		border-bottom:1px solid lightgray;
+	}
+	.info_price, .info_option {
+		text-align:left;
+		font-size:13px;
+		border-bottom:1px solid lightgray;
+	}
+	.info_price ul { 
+		list-style:none; display:inline-block;	
+		margin:10px 70px 10px 0;
+		padding:0;
+	}
+	.info_option ul {
+		list-style:none; display:inline-block;	
+		margin:10px 55px 10px 0; padding:0;
+	}
+	.info_price li, .info_option li { margin:10px; }	
+	.info_option select {
+		font-size:11px;
+		width:350px; height:30px; 
+		vertical-align:middle;
+	}
+	.info_order { border-bottom:1px solid lightgray; }
+	.info_order p {
+		font-size:12px; 
+		text-align:left;
+		color:gray;
+		margin:10px;
+	}
+	.info_order table { font-size:12px; }
+	.info_order thead {
+		background-color:rgb(255,255,255);
+		border-bottom:1px solid lightgray;
+	}
+	.info_order th { border:1px solid lightgray; border-bottom:none; }
+	.info_order tbody { border-bottom:1px solid lightgray; }
+	.info_order div {
+		text-align:right;
+		margin-bottom:15px;
+		font-size:14px;
+	}
+	.info_order strong { font-size:18px; }
+	.info_order span { color:gray; font-size:13px; }
+	.button_div { margin-top:20px; }
+	
+	.바로구매 {
+		border:none;
+		background-color:black;
+		color:white;
+		width:200px; height:60px; 
+		border-radius:4px;
+		text-decoration:none;
+	}
+	.장바구니, .관심상품 {
+		border:1px solid lightgray;
+		background-color:white;
+		border-radius:4px;
+		width:150px; height:60px;
+	}
+	
+	.prod_recom_div {
+		margin-top:20px;
+		border-top:1px solid lightgray;
+		border-bottom:1px solid lightgray;
+		padding:20px;
+		font-size:14px;
+	}

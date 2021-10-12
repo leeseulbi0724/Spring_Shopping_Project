@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+	.back_div { width:1200px; margin:100px; }
+	.count_box {
+		background-color:rgb(250,250,250);
+		text-align:left;
+		font-size:13px;
+		font-weight:bold;
+		border:1px solid lightgray;
+		padding:10px 10px;
+	}
+	.main_box { width:100%; }
+	.pay_box {
+		background-color:rgb(250,250,250);
+		text-align:right;
+		font-size:13px;
+		border:1px solid lightgray;
+		padding:5px 10px;
+	}
+	
+	.table thead th {
+		font-weight:normal;
+		font-size:14px;
+	}
+	.table tbody tr {
+		border-top:1px solid lightgray;
+		vertical-align:middle;
+	}
+	.table img.prod_img {
+		width:100%; hieght:100%; vertical-align:middle;
+	}
+	.table tbody { font-size:14px; }
+	.상품명 {
+		text-align:left;
+		font-weight:bold;
+	}
+	.상품명>span {
+		font-weight:normal;
+		color:gray;
+	}
+	
+	.선택 {
+		display:inline-block;
+		position:relative;
+		top:25px;
+	}
+	.선택 button { margin-bottom:5px; }
+	.주문하기 {
+		border:none;
+		background-color:black;
+		color:white;
+		width:100%;
+		border-radius:4px;
+	}
+	.관심상품등록, .삭제 {
+		border:1px solid lightgray;
+		background-color:white;
+		width:100%;
+		border-radius:4px;
+	}
+	
+	.결제하기 {
+		float:right;
+		border:none;
+		background-color:rgb(10,128,192);
+		color:white;
+		border-radius:4px;
+		margin-top:20px;
+		width:200px;
+		height:50px;
+	}

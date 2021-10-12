@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+	html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	    margin: 0;
+	    padding: 0;
+	    border: 0;
+	    font-size:100%;
+	    vertical-align: baseline;
+	    background: transparent;
+	}
+	.title {
+		background-color:rgb(34,34,34);
+		color:white;
+		width:100%;
+		text-align:center;
+		font-size:13px;
+	}
+	.left>div { margin-top:20px; }
+	.left {
+		width:15%;
+		height:100vh;
+		background-color:rgb(34,34,34);
+		display:inline-block;
+		float:left;
+	}
+	.left a {
+		text-decoration:none;
+		color:white;
+		font-size:13px;
+		display:block;
+		text-align:center;
+		padding:5px 0;
+	}
+	.left a.click {		
+		background-color:rgb(0,116,162);			
+	}
+	.left a.noclick {
+		background-color:rgb(34,34,34);
+		border-bottom:1px solid black;
+	}
+	.main {
+		background-color:rgb(238,238,238);
+		width:85%;
+		height:100vh;
+		display:inline-block;
+		float:left;
+	}
+	.main>div>div:first-child {
+		border-bottom:1px solid lightgray;
+		font-size:13px;
+		font-weight:bold;
+		padding:5px 0;
+	}
+	.main>div { display:inline-block; }
+	.main>div>div>img { margin:0 5px; }
+	
+	.판매진행현황 {
+		background-color:white;
+		width:50%; height:400px;
+		margin:40px 10px 10px 50px;
+		float:left; text-align:center;
+		border:1px solid lightgray;
+	}
+	.판매진행현황_one {
+		display:inline-block;
+		width:22%; height:130px;
+		border-radius:100px;
+		text-align:center;
+		vertical-align:middle;
+		margin:10px;
+	}
+	.판매진행현황_one>p {
+		margin-top:40px; color:white;
+	}
+	.one_div {
+		width:600px;
+		display:inline-block;
+		margin-top:30px;
+	}
+	.입금확인중 { background-color:rgb(76,197,205); }
+	.주문접수 { background-color:rgb(225,126,144); }
+	.발주확인 { background-color:rgb(168,199,123); }
+	.출고처리 { background-color:rgb(200,171,217); }
+	.출고지연 { background-color:rgb(247,179,42); }
+	.출고완료 { background-color:rgb(147,196,228); }
+	
+	.판매실적 {
+		background-color:white;
+		width:40%; height:250px;
+		float:left;
+		margin:40px 0 10px 10px;
+		text-align:center;
+		border:1px solid lightgray;
+	}
+	.판매실적_box {
+		border:1px solid lightgray; 
+		width:30%; height:190px;
+		display:inline-block;
+		float:left;
+		margin:15px 1%;
+	}
+	.판매실적_box:nth-child(2) { margin-left:3%; }
+		
+	.클레임현황 {
+		background-color:white;
+		width:50%; height:150px;
+		float:left;
+		margin:10px 10px 10px 50px;
+		text-align:center;
+		border:1px solid lightgray;
+	}
+	.클레임현황_box {
+		width:31%; height:100px;
+		border:1px solid lightgray;
+		display:inline-block;
+		margin:10px 0;
+	}
+	.클레임현황_box p { margin-top:35px; display:inline-block; color:rgb(53,132,172); font-weight:bold; }
+	.클레임현황_box div { 
+		border-radius:30px; 
+		display:inline-block;
+		width:20px; height:20px;
+		font-size:12px;
+		color:white;
+	}		
+	.취소요청 { background-color:rgb(230,74,84); }
+	.반품요청 { background-color:rgb(165,209,109); }
+	.교환요청 { background-color:rgb(247,178,36); }
+	
+	.고객문의현황 {
+		background-color:white;
+		width:40%; height:295px;
+		float:left;
+		margin:-135px 0 10px 10px;
+		border:1px solid lightgray;
+	}
