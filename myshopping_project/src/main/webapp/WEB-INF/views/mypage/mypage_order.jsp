@@ -128,7 +128,7 @@
 					</thead>
 					<tbody>
 						<tr>
-							<td>2021/10/11<br><a href="#">211011100001</a></td>
+							<td>2021/10/11<br><a href="mypage_order_detail.do">211011100001</a></td>
 							<td>디바 스퀘어토 기모 앵클부츠 (5cm)<br>[ 옵션 : 블랙(black)/240 ]</td>
 							<td><span>17,900원</span> / 1개</td>
 							<td>결제완료</td>
