@@ -6,22 +6,15 @@
 <meta charset="UTF-8">
 <link rel="shortcut icon" type="image⁄x-icon" href="http://localhost:9000/myshopping/images/admin_icon.png">
 <title>관리자 페이지</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
 <link href="http://localhost:9000/myshopping/css/admin/admin_main.css" rel="stylesheet">
+<link href="http://localhost:9000/myshopping/css/admin/admin_commons.css" rel="stylesheet">
 </head>
 <body>
-	<div class="title">관리자 로그인 중입니다</div>
-	<div class="left">
-		<div>
-			<a href="admin_main.do" class="click">서비스현황</a>
-			<a href="#" class="noclick">상품관리</a>
-			<a href="#" class="noclick">주문관리</a>
-			<a href="#" class="noclick">문의관리</a>
-			<a href="#" class="noclick">회원관리</a>
-			<a href="#" class="noclick">공지관리</a>
-		</div>
-	</div>
+	<jsp:include page="admin_menu.jsp"></jsp:include>
+	
 	<div class="main">
 		<div class="판매진행현황">
 			<div style="text-align:left; background-color:rgb(249,249,249); ">
