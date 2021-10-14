@@ -32,20 +32,20 @@
 <div class="left">
 		<div>
 			<a href="admin_main.do" class="click" style="text-align:center;">서비스현황</a>
-		<a class="noclick" id="default">상품관리<img src="http://localhost:9000/myshopping/images/blue_img.png"></a>
-			<ul>
-				<a href="admin_prod_write.do"><li>상품 등록</li></a>
-				<a href="#"><li>상품 목록</li></a>
-			</ul>			
-		<a class="noclick" id="default">주문관리<img src="http://localhost:9000/myshopping/images/blue_img.png"></a>
-			<ul>
-				<a href="#"><li>주문 현황</li></a>
-				<a href="#"><li>취소/반품/교환 현황</li></a>
-				<a href="#"><li>배송 현황</li></a>
-			</ul>					
-		<a class="noclick" id="default">문의관리<img src="http://localhost:9000/myshopping/images/blue_img.png"></a>
-		<a class="noclick" id="default">회원관리<img src="http://localhost:9000/myshopping/images/blue_img.png"></a>
-		<a class="noclick" id="default">공지관리<img src="http://localhost:9000/myshopping/images/blue_img.png"></a>
+			<a class="noclick" id="default">상품관리<img src="http://localhost:9000/myshopping/images/blue_img.png"></a>
+				<ul class="상품">
+					<a href="admin_prod_write.do" class="상품등록"><li>상품 등록</li></a>
+					<a href="#"><li>상품 목록</li></a>
+				</ul>			
+			<a class="noclick" id="default">주문관리<img src="http://localhost:9000/myshopping/images/blue_img.png"></a>
+				<ul class="주문">
+					<a href="#"><li>주문 현황</li></a>
+					<a href="#"><li>취소/반품/교환 현황</li></a>
+					<a href="#"><li>배송 현황</li></a>
+				</ul>					
+			<a class="noclick" id="default">문의관리<img src="http://localhost:9000/myshopping/images/blue_img.png"></a>
+			<a class="noclick" id="default">회원관리<img src="http://localhost:9000/myshopping/images/blue_img.png"></a>
+			<a class="noclick" id="default">공지관리<img src="http://localhost:9000/myshopping/images/blue_img.png"></a>
 	</div>
 </div>
 </body>

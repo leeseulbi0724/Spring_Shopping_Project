@@ -11,6 +11,14 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
 <link href="http://localhost:9000/myshopping/css/admin/admin_commons.css" rel="stylesheet">
 </head>
+<style>
+	.상품등록 { font-weight:bold; }
+</style>
+<script>
+	$(document).ready(function() {
+		$(".left .상품").css("display","block");
+	});
+</script>
 <body>
 	<jsp:include page="../admin_menu.jsp"></jsp:include>
 	
