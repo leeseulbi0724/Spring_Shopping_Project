@@ -39,9 +39,9 @@
 				</ul>			
 			<a class="noclick" id="default">주문관리<span>></span></a>
 				<ul class="주문">
-					<a href="#"><li>주문 현황</li></a>
-					<a href="#"><li>취소/반품/교환 현황</li></a>
-					<a href="#"><li>배송 현황</li></a>
+					<a href="admin_order_list.do" class="주문현황"><li>주문 현황</li></a>
+					<a href="admin_cancle_list.do" class="취소현황"><li>취소/반품/교환 현황</li></a>
+					<a href="admin_deliver_list.do" class="배송현황"><li>배송 현황</li></a>
 				</ul>					
 			<a class="noclick" id="default">문의관리<span>></span></a>
 			<a class="noclick" id="default">회원관리<span>></span></a>

@@ -29,5 +29,23 @@ public class AdminController {
 	public String admin_prod_list() {
 		return "admin/product/admin_prod_list";
 	}
+	
+	//관리자 주문현황페이지
+	@RequestMapping(value="/admin_order_list.do")
+	public String admin_order_list() {
+		return "admin/order/admin_order_list";
+	}
+	
+	//관리자 취소/반품/교환현황페이지
+	@RequestMapping(value="/admin_cancle_list.do")
+	public String admin_cancle_list() {
+		return "admin/order/admin_cancle_list";
+	}
+	
+	//관리자 주문현황페이지
+	@RequestMapping(value="/admin_deliver_list.do")
+	public String admin_deliver_list() {
+		return "admin/order/admin_deliver_list";
+	}
 
 }
