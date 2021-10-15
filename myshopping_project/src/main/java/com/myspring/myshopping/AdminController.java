@@ -23,5 +23,11 @@ public class AdminController {
 		
 		return mv;
 	}
+	
+	//包府磊 惑前格废其捞瘤
+	@RequestMapping(value="/admin_prod_list.do")
+	public String admin_prod_list() {
+		return "admin/product/admin_prod_list";
+	}
 
 }

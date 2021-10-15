@@ -35,7 +35,7 @@
 			<a class="noclick" id="default">상품관리<span>></span></a>
 				<ul class="상품">
 					<a href="admin_prod_write.do" class="상품등록"><li>상품 등록</li></a>
-					<a href="#"><li>상품 목록</li></a>
+					<a href="admin_prod_list.do" class="상품목록"><li>상품 목록</li></a>
 				</ul>			
 			<a class="noclick" id="default">주문관리<span>></span></a>
 				<ul class="주문">
