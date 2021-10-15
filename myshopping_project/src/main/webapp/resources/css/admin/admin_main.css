@@ -3,10 +3,12 @@
 		border-bottom:1px solid lightgray;
 		font-size:13px;
 		font-weight:bold;
-		padding:5px 0;
+		padding:7px 10px;
+		text-align:left;
+		background-color:rgb(249,249,249);
 	}
 	.main>div { display:inline-block; }
-	.main>div>div>img { margin:0 5px; }
+	.main>div>div>img { margin:0 10px; }
 	
 	.판매진행현황 {
 		background-color:white;
@@ -40,7 +42,7 @@
 	
 	.판매실적 {
 		background-color:white;
-		width:40%; height:250px;
+		width:40%; height:255px;
 		float:left;
 		margin:40px 0 10px 10px;
 		text-align:center;
@@ -57,7 +59,7 @@
 		
 	.클레임현황 {
 		background-color:white;
-		width:50%; height:150px;
+		width:50%; height:155px;
 		float:left;
 		margin:10px 10px 10px 50px;
 		text-align:center;
@@ -83,7 +85,7 @@
 	
 	.고객문의현황 {
 		background-color:white;
-		width:40%; height:295px;
+		width:40%; height:300px;
 		float:left;
 		margin:-135px 0 10px 10px;
 		border:1px solid lightgray;

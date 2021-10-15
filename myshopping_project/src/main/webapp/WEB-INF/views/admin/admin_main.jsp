@@ -17,9 +17,7 @@
 	
 	<div class="main">
 		<div class="판매진행현황">
-			<div style="text-align:left; background-color:rgb(249,249,249); ">
-				<img src="http://localhost:9000/myshopping/images/one.png"  width="10px" height="10px">판매 진행 현황
-			</div>
+			<div>판매 진행 현황</div>
 			<div class="one_div">
 				<a href="#"><div class="판매진행현황_one 입금확인중"><p>입금확인중<br>0건</p></div></a>
 				<a href="#"><div class="판매진행현황_one 주문접수"><p>주문접수<br>0건</p></div></a>
@@ -30,25 +28,19 @@
 			</div>
 		</div>
 		<div class="판매실적">
-			<div style="text-align:left; background-color:rgb(249,249,249); ">
-				<img src="http://localhost:9000/myshopping/images/two.png"  width="10px" height="10px">판매 실적
-			</div>
+			<div>판매 실적</div>
 			<div class="판매실적_box"></div>
 			<div class="판매실적_box"></div>
 			<div class="판매실적_box"></div>
 		</div>
 		<div class="클레임현황">
-			<div style="text-align:left; background-color:rgb(249,249,249); ">
-				<img src="http://localhost:9000/myshopping/images/five.png"  width="10px" height="10px">클레임 현황
-			</div>
+			<div>클레임 현황</div>
 			<a href="#"><div class="클레임현황_box"><p>취소요청</p> <div class="취소요청">0</div></div></a>
 			<a href="#"><div class="클레임현황_box"><p>반품요청</p> <div class="반품요청">0</div></div></a>
 			<a href="#"><div class="클레임현황_box"><p>교환요청</p> <div class="교환요청">0</div></div></a>
 		</div>
 		<div class="고객문의현황">
-			<div style="text-align:left; background-color:rgb(249,249,249); ">
-				<img src="http://localhost:9000/myshopping/images/four.png"  width="10px" height="10px">고객 문의 현황
-			</div>
+			<div>고객 문의 현황</div>
 		</div>
 	</div>
 </body>
