@@ -9,6 +9,9 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
 <link href="http://localhost:9000/myshopping/css/commons.css" rel="stylesheet">
+<script src="http://localhost:9000/myshopping/js/address.js"></script>
+<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
 <style>	
 	.back_div {
@@ -42,10 +45,6 @@
 		vertical-align:middle;
 	}
 	
-	.red {
-		float:right;
-		font-size:13px;
-	}
 	.red>div {
 		border-radius:50px;
 		width:7px; height:7px;
@@ -54,7 +53,7 @@
 		margin:0 5px;
 	}
 	
-	.back_div button {
+	.회원가입 {
 		background-color:black;
 		padding:10px 30px;
 		color:white;
@@ -63,7 +62,15 @@
 		border:none;
 		display:inline-block;
 	}
+	.주소검색, .form-select, .red { font-size:13px; }
 </style>
+<script>
+	$(document).ready(function() {
+		$(".email-select").click(function() {
+			$("#email2").val($(this).val());
+		});
+	});
+</script>
 <body>
 <jsp:include page="../header.jsp"></jsp:include>
 
@@ -79,34 +86,49 @@
 			<div class="info">
 				<ul>
 					<li><strong>기본정보</strong></li>
-					<li class="red"><div></div>필수입력정보</li>
+					<li class="red" style="float:right"><div></div>필수입력정보</li>
 				</ul>
 				<ul>
-					<li><label>아이디</label></li>
+					<li class="red"><div></div> <label>아이디</label></li>
 					<li><input type="text" class="form-control"></li>
 				</ul>
 				<ul>
-					<li><label>비밀번호</label></li>
+					<li class="red"><div></div> <label>비밀번호</label></li>
 					<li><input type="password" class="form-control"></li>
 				</ul>
 				<ul>
-					<li><label>비밀번호 확인</label></li>
+					<li class="red"><div></div> <label>비밀번호 확인</label></li>
 					<li><input type="password" class="form-control"></li>
 				</ul>
 				<ul>
-					<li><label>이름</label></li>
+					<li class="red"><div></div> <label>이름</label></li>
 					<li><input type="text" class="form-control"></li>
 				</ul>
 				<ul>
-					<li><label>주소</label></li>
-					<li><input type="text" class="form-control"  style="width:300px"></li>
-					<li><input type="text" class="form-control"  style="width:300px"></li>
+					<li class="red"><div></div> <label>주소</label></li>
+					<li><input type="text" class="form-control"  style="width:300px" id="addr1"></li>
+					<li><input type="text" class="form-control"  style="width:300px" id="addr2"></li>
+					<li><button type="button" class="btn btn-outline-dark 주소검색"  onclick="addr()" >주소 검색</button></li>
 				</ul>
 				<ul>
-					<li><label>휴대폰번호</label></li>
-					<li><input type="text" class="form-control" ></li>-
-					<li><input type="text" class="form-control"></li>-
+					<li class="red"><div></div> <label>휴대폰번호</label></li>
+					<li><input type="text" class="form-control" ></li> -
+					<li><input type="text" class="form-control"></li> -
 					<li><input type="text" class="form-control" ></li>
+				</ul>
+				<ul>
+					<li class="red"><div></div> <label>이메일</label></li>
+					<li><input type="text" class="form-control"></li> @
+					<li><input type="text" class="form-control" id="email2"></li>
+					<li>
+						<select class="form-select email-select">
+							<option value="">직접입력</option>
+							<option value="naver.com">네이버</option>
+							<option value="nate.com">네이트</option>
+							<option value="gmail.com">구글</option>
+							<option value="daum.net">다음</option>
+						</select>
+					</li>
 				</ul>
 			</div>
 			
@@ -129,7 +151,7 @@
 				</ul>
 			</div>
 			
-			<button>회원가입</button>
+			<button class="회원가입">회원가입</button>
 		</form>
 	</div>
 </section>
