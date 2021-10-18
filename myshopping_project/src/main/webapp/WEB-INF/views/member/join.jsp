@@ -69,6 +69,11 @@
 		$(".email-select").click(function() {
 			$("#email2").val($(this).val());
 		});
+		
+		
+		$(".회원가입").click(function() {
+			join.submit();
+		});
 	});
 </script>
 <body>
@@ -82,7 +87,7 @@
 
 <section class="background">
 	<div class="back_div">
-		<form>
+		<form autocomplete="off" name="join" action="join_proc.do" method="post" >
 			<div class="info">
 				<ul>
 					<li><strong>기본정보</strong></li>
@@ -90,36 +95,36 @@
 				</ul>
 				<ul>
 					<li class="red"><div></div> <label>아이디</label></li>
-					<li><input type="text" class="form-control"></li>
+					<li><input type="text" class="form-control" id="id" name="id"></li>
 				</ul>
 				<ul>
 					<li class="red"><div></div> <label>비밀번호</label></li>
-					<li><input type="password" class="form-control"></li>
+					<li><input type="password" class="form-control" id="pass" name="pass"></li>
 				</ul>
 				<ul>
 					<li class="red"><div></div> <label>비밀번호 확인</label></li>
-					<li><input type="password" class="form-control"></li>
+					<li><input type="password" class="form-control" id="pass2" name="pass2"></li>
 				</ul>
 				<ul>
 					<li class="red"><div></div> <label>이름</label></li>
-					<li><input type="text" class="form-control"></li>
+					<li><input type="text" class="form-control" id="name" name="name"></li>
 				</ul>
 				<ul>
 					<li class="red"><div></div> <label>주소</label></li>
-					<li><input type="text" class="form-control"  style="width:300px" id="addr1"></li>
-					<li><input type="text" class="form-control"  style="width:300px" id="addr2"></li>
+					<li><input type="text" class="form-control"  style="width:300px" id="addr1" name="addr1"></li>
+					<li><input type="text" class="form-control"  style="width:300px" id="addr2" name="addr2"></li>
 					<li><button type="button" class="btn btn-outline-dark 주소검색"  onclick="addr()" >주소 검색</button></li>
 				</ul>
 				<ul>
 					<li class="red"><div></div> <label>휴대폰번호</label></li>
-					<li><input type="text" class="form-control" ></li> -
-					<li><input type="text" class="form-control"></li> -
-					<li><input type="text" class="form-control" ></li>
+					<li><input type="text" class="form-control"  id="hp1" name="hp1"></li> -
+					<li><input type="text" class="form-control" id="hp2" name="hp2"></li> -
+					<li><input type="text" class="form-control"  id="hp3" name="hp3"></li>
 				</ul>
 				<ul>
 					<li class="red"><div></div> <label>이메일</label></li>
-					<li><input type="text" class="form-control"></li> @
-					<li><input type="text" class="form-control" id="email2"></li>
+					<li><input type="text" class="form-control" id="email1" name="email1"></li> @
+					<li><input type="text" class="form-control" id="email2" name="email2"></li>
 					<li>
 						<select class="form-select email-select">
 							<option value="">직접입력</option>
@@ -138,20 +143,20 @@
 				</ul>
 				<ul>
 					<li><label  style="width:150px">성별</label></li>
-					<li><label><input type="radio" name="gender" class="radio">남자</label></li>
-					<li><label><input type="radio" name="gender" class="radio">여자</label></li>
+					<li><label><input type="radio" name="gender" class="radio" value="남자">남자</label></li>
+					<li><label><input type="radio" name="gender" class="radio" value="여자">여자</label></li>
 				</ul>
 				<ul>
 					<li><label style="width:150px">생년월일</label></li>
-					<li><input type="text" class="form-control"  style="width:100px"></li>년
-					<li><input type="text" class="form-control"  style="width:100px"></li>월
-					<li><input type="text" class="form-control"  style="width:100px"></li>일
-					<li><label><input type="radio" name="birth" class="radio">양력</label></li>
-					<li><label><input type="radio" name="birth" class="radio">음력</label></li>
+					<li><input type="text" class="form-control"  style="width:100px" id="yyyy" name="yyyy"></li>년
+					<li><input type="text" class="form-control"  style="width:100px" id="mm" name="mm"></li>월
+					<li><input type="text" class="form-control"  style="width:100px" id="dd" name="dd"></li>일
+					<li><label><input type="radio" name="birth_type" class="radio" value="양력">양력</label></li>
+					<li><label><input type="radio" name="birth_type" class="radio" value="음력">음력</label></li>
 				</ul>
 			</div>
 			
-			<button class="회원가입">회원가입</button>
+			<button class="회원가입" type="button">회원가입</button>
 		</form>
 	</div>
 </section>
