@@ -54,5 +54,17 @@ public class MemberController {
 	public String pass_find() {
 		return "member/pass_find";
 	}
+	
+	//성공페이지
+	@RequestMapping(value="/success.do")
+	public String success() {
+		return "member/success";
+	}
+	
+	//실패페이지
+	@RequestMapping(value="/fail.do")
+	public String fail() {
+		return "member/fail";
+	}
 
 }
