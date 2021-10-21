@@ -176,7 +176,7 @@
 		  <version>1.4</version>
 		</dependency>
 		
-		<!-- ******* 비밀번호 암호화  ******* -->
+		<!-- 비밀번호 암호화  -->
 		<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-core -->
 		<dependency>
 		   <groupId>org.springframework.security</groupId>

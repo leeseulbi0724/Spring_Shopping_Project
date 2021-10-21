@@ -7,7 +7,20 @@
 <mapper namespace="mapper.member">
 
 	<insert id="join" parameterType="com.myshop.vo.MemberVO">
-		insert into myshop_member values(#{id}, #{pass}, #{name}, #{addr1}, #{addr2}, #{hp}, #{email}, #{gender}, #{birth}, #{birth_type}, sysdate)
+		<choose>
+			<when test="gender == null and birth == null">
+				insert into myshop_member values(#{id}, #{pass}, #{name}, #{addr1}, #{addr2}, #{hp}, #{email}, null, null, null, sysdate)
+			</when>
+			<when test="gender == null">
+				insert into myshop_member values(#{id}, #{pass}, #{name}, #{addr1}, #{addr2}, #{hp}, #{email}, null, #{birth}, #{birth_type}, sysdate)
+			</when>
+			<when test="birth == null">
+				insert into myshop_member values(#{id}, #{pass}, #{name}, #{addr1}, #{addr2}, #{hp}, #{email}, #{gender}, null, null, sysdate)				
+			</when>
+			<otherwise>
+				insert into myshop_member values(#{id}, #{pass}, #{name}, #{addr1}, #{addr2}, #{hp}, #{email}, #{gender}, #{birth}, #{birth_type}, sysdate)
+			</otherwise>
+		</choose>		
 	</insert>
 
 
