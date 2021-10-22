@@ -8,5 +8,6 @@ import com.myshop.vo.MemberVO;
 public interface MemberService {
 	
 	boolean getJoinResult(MemberVO vo);
+	MemberVO getLoginResult(MemberVO vo);
 
 }

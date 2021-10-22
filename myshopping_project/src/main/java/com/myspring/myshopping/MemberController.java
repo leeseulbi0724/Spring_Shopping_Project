@@ -1,12 +1,15 @@
 package com.myspring.myshopping;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.myshop.service.MemberService;
@@ -51,6 +54,24 @@ public class MemberController {
 	@RequestMapping(value="/login.do") 
 	public String login() {
 		return "member/login";
+	}
+	
+	//로그인_proc
+	@ResponseBody
+	@RequestMapping(value="/login_proc.do", method=RequestMethod.POST)
+	public boolean login_proc(HttpServletRequest request) {
+		boolean result = false;
+		MemberVO vo = new MemberVO();
+		vo.setId(request.getParameter("id"));
+		vo.setPass(request.getParameter("pass"));
+		MemberVO mvo = MemberService.getLoginResult(vo);
+		boolean pwCheck = pwdEncoder.matches(vo.getPass(), mvo.getPass());
+		
+		if (mvo != null && pwCheck) {
+			result = true;
+		}		
+		
+		return result;
 	}
 	
 	//아이디 찾기

@@ -18,5 +18,9 @@ public class MemberDAO {
 	public int getJoinResult(MemberVO vo) {
 		return sqlSession.insert(namespace+".join", vo);
 	}
+	
+	public MemberVO getLoginResult(MemberVO vo) {
+		return sqlSession.selectOne(namespace+".login", vo);
+	}
 
 }

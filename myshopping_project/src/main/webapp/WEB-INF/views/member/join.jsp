@@ -62,7 +62,8 @@
 		border:none;
 		display:inline-block;
 	}
-	.주소검색, .form-select, .red { font-size:13px; }
+	.주소검색, .중복확인, .form-select, .red, .pass_msg { font-size:13px; }
+	.pass_msg { margin-left:5px; }
 </style>
 <script>
 	$(document).ready(function() {
@@ -72,8 +73,63 @@
 		
 		
 		$(".회원가입").click(function() {
-			join.submit();
+			if ($("#id").val() == "") {
+				alert("아이디를 입력해주세요");
+				$('html, body').animate({scrollTop : $("#id").offset().top - 100}, 100);
+				$("#id").focus();
+			} else if($("#pass").val() == "") {
+				alert("비밀번호를 입력해주세요");		
+				$('html, body').animate({scrollTop : $("#pass").offset().top - 100}, 100);
+				$("#pass").focus();
+			} else if($("#pass2").val() == "") {
+				alert("비밀번호 확인을 입력해주세요");		
+				$('html, body').animate({scrollTop : $("#pass2").offset().top - 100}, 100);
+				$("#pass2").focus();
+			} else if($("#name").val() == "") {
+				alert("이름을 입력해주세요");		
+				$('html, body').animate({scrollTop : $("#name").offset().top - 100}, 100);
+				$("#name").focus();
+			} else if($("#addr1").val() == "") {
+				alert("주소를 입력해주세요");		
+				$('html, body').animate({scrollTop : $("#addr1").offset().top - 100}, 100);
+				$("#addr1").focus();
+			} else if($("#addr2").val() == "") {
+				alert("주소를 입력해주세요");		
+				$('html, body').animate({scrollTop : $("#addr2").offset().top - 100}, 100);
+				$("#addr2").focus();
+			} else if($("#hp1").val() == "") {
+				alert("휴대폰번호를 입력해주세요");		
+				$('html, body').animate({scrollTop : $("#hp1").offset().top - 100}, 100);
+				$("#hp1").focus();
+			} else if($("#hp2").val() == "") {
+				alert("휴대폰번호를 입력해주세요");		
+				$('html, body').animate({scrollTop : $("#hp2").offset().top - 100}, 100);
+				$("#hp2").focus();
+			} else if($("#hp3").val() == "") {
+				alert("휴대폰번호를 입력해주세요");		
+				$('html, body').animate({scrollTop : $("#hp3").offset().top - 100}, 100);
+				$("#hp3").focus();
+			} else if($("#email1").val() == "") {
+				alert("이메일을 입력해주세요");		
+				$("#email1").focus();
+			} else if($("#email2").val() == "") {
+				alert("이메일주소를 입력해주세요");		
+				$("#email2").focus();
+			} else {
+				join.submit();				
+			}
 		});
+		
+		/* 비밀번호 - 비밀번호 확인 체크 */
+		$("#pass2").blur(function() {
+			if ($("#pass").val() != $("#pass2").val() ) { 
+				$(".pass_msg").text("비밀번호가 동일하지 않습니다.").css("color","red");
+				$("#pass2").val("").focus();
+			} else { 
+				$(".pass_msg").text("비밀번호가 동일합니다.").css("color","blue");
+			}
+		});
+		
 	});
 </script>
 <body>
@@ -96,6 +152,7 @@
 				<ul>
 					<li class="red"><div></div> <label>아이디</label></li>
 					<li><input type="text" class="form-control" id="id" name="id"></li>
+					<li><button class="btn btn-outline-dark 중복확인">중복확인</button></li>
 				</ul>
 				<ul>
 					<li class="red"><div></div> <label>비밀번호</label></li>
@@ -104,6 +161,7 @@
 				<ul>
 					<li class="red"><div></div> <label>비밀번호 확인</label></li>
 					<li><input type="password" class="form-control" id="pass2" name="pass2"></li>
+					<li><div class="pass_msg"></div><li>
 				</ul>
 				<ul>
 					<li class="red"><div></div> <label>이름</label></li>
@@ -113,7 +171,7 @@
 					<li class="red"><div></div> <label>주소</label></li>
 					<li><input type="text" class="form-control"  style="width:300px" id="addr1" name="addr1"></li>
 					<li><input type="text" class="form-control"  style="width:300px" id="addr2" name="addr2"></li>
-					<li><button type="button" class="btn btn-outline-dark 주소검색"  onclick="addr()" >주소 검색</button></li>
+					<li><button type="button" class="btn btn-outline-dark 주소검색"  onclick="addr()" >주소검색</button></li>
 				</ul>
 				<ul>
 					<li class="red"><div></div> <label>휴대폰번호</label></li>
