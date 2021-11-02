@@ -130,6 +130,35 @@
 			}
 		});
 		
+		/** 중복확인 **/
+		$(".중복확인").click(function() {
+			var id = $("#id").val();
+			if ($("#id").val() == 	"") {
+				alert("아이디를 입력해주세요");
+				$("#id").focus();
+			} else {
+			    $.ajax({
+			        url:"id_check.do",
+			        type:"post",
+			        data: {
+			     	 	 id: id,
+			        }, 
+			        dataType:"json",
+			      success:function(result){
+			      		if (result) { //true이면 사용 가능 아이디
+			      			alert("사용 가능한 아이디입니다");
+			      			$("#pass").focus();
+			      		} else { //false이면 이미 존재하는 아이디
+			      			alert("이미 존재하는 아이디입니다.")
+			      			$("#id").val("").focus(); 
+			      		}
+			        },
+			        
+			     });  
+			}
+
+		});
+		
 	});
 </script>
 <body>
@@ -152,7 +181,7 @@
 				<ul>
 					<li class="red"><div></div> <label>아이디</label></li>
 					<li><input type="text" class="form-control" id="id" name="id"></li>
-					<li><button class="btn btn-outline-dark 중복확인">중복확인</button></li>
+					<li><button type="button" class="btn btn-outline-dark 중복확인">중복확인</button></li>
 				</ul>
 				<ul>
 					<li class="red"><div></div> <label>비밀번호</label></li>

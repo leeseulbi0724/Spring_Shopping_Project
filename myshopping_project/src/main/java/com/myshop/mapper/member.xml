@@ -27,6 +27,10 @@
 	<select id="login" parameterType="com.myshop.vo.MemberVO" resultType="com.myshop.vo.MemberVO">
 		select * from myshop_member where id = #{id}
 	</select>
+	
+	<select id="id_check" parameterType="java.lang.String" resultType="java.lang.Integer">
+		select count(*) from myshop_member where id=#{id}
+	</select>
 
 
 </mapper>

@@ -19,8 +19,14 @@ public class MemberDAO {
 		return sqlSession.insert(namespace+".join", vo);
 	}
 	
+	/** 로그인 **/
 	public MemberVO getLoginResult(MemberVO vo) {
 		return sqlSession.selectOne(namespace+".login", vo);
+	}
+	
+	/** 중복확인 **/
+	public int getIdCheckResult(String id) {
+		return sqlSession.selectOne(namespace+".id_check", id);
 	}
 
 }

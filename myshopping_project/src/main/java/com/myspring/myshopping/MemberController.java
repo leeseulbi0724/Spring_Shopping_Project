@@ -50,6 +50,17 @@ public class MemberController {
 		return mv;
 	}
 	
+	//중복확인
+	@ResponseBody
+	@RequestMapping(value="id_check.do", method=RequestMethod.POST)
+	public boolean id_check(HttpServletRequest request) {
+		
+		boolean result = MemberService.getIdCheckResult(request.getParameter("id"));
+		
+		return result;
+		
+	}
+	
 	//로그인
 	@RequestMapping(value="/login.do") 
 	public String login() {

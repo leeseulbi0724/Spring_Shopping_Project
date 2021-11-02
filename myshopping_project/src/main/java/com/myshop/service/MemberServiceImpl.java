@@ -30,5 +30,16 @@ public class MemberServiceImpl implements MemberService {
 		
 		return mvo;
 	}
+	
+	@Override
+	public boolean getIdCheckResult(String id) {
+		boolean result = false;
+		int val = memberDAO.getIdCheckResult(id);
+		
+		if (val==0) {
+			result = true;
+		}
+		return result;
+	}
 
 }
