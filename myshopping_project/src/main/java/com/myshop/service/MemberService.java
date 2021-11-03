@@ -10,5 +10,6 @@ public interface MemberService {
 	boolean getJoinResult(MemberVO vo);
 	MemberVO getLoginResult(MemberVO vo);
 	boolean getIdCheckResult(String id);
+	String getNameResult(String id);
 
 }

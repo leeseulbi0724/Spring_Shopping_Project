@@ -41,5 +41,12 @@ public class MemberServiceImpl implements MemberService {
 		}
 		return result;
 	}
+	
+	@Override
+	public String getNameResult(String id) {
+		String name = memberDAO.getNameResult(id);
+		
+		return name;
+	}
 
 }

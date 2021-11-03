@@ -83,11 +83,25 @@ public class MemberController {
 		
 		if (mvo != null && pwCheck) {
 			result = true;
-			session.setAttribute("session_id", vo.getId());
+			session.setAttribute("session_id", vo.getId());			
+			session.setAttribute("session_name", MemberService.getNameResult(vo.getId()));
 		}		
 		
 		return result;
 	}
+	
+	 //로그아웃
+	 @RequestMapping(value = "/logout.do", method=RequestMethod.GET)
+	 public ModelAndView logout(HttpServletRequest request) {
+		 ModelAndView mv = new ModelAndView();
+		 HttpSession session = request.getSession();
+	     session.invalidate();
+	     
+	     mv.setViewName("redirect:/index.do");
+
+	     return mv;
+
+	 }
 	
 	//아이디 찾기
 	@RequestMapping(value="/id_find.do")

@@ -28,5 +28,10 @@ public class MemberDAO {
 	public int getIdCheckResult(String id) {
 		return sqlSession.selectOne(namespace+".id_check", id);
 	}
+	
+	/** 이름 가져오기 **/
+	public String getNameResult(String id) {
+		return sqlSession.selectOne(namespace+".name_result", id);
+	}
 
 }

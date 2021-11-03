@@ -139,8 +139,9 @@
 							<li><a href="join.do">회원가입</a></li>
 						</c:if>
 						<c:if test = "${!empty session_id}">
-							<li><a>안녕하세요! ${session_id }님</a>
-							<li><a href="mypage.do">마이페이지</a>
+							<li><a>안녕하세요! ${session_name }님</a></li>
+							<li><a href="logout.do">로그아웃</a></li>
+							<li><a href="mypage.do">마이페이지</a></li>
 						</c:if>
 						<li><a href="#"><b>공지사항</b></a></li>
 						<li><a href="#"><b>EVENT</b></a></li>

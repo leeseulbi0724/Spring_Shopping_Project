@@ -31,6 +31,10 @@
 	<select id="id_check" parameterType="java.lang.String" resultType="java.lang.Integer">
 		select count(*) from myshop_member where id=#{id}
 	</select>
+	
+	<select id="name_result" parameterType="java.lang.String" resultType="java.lang.String">
+		select name from myshop_member where id=#{id}
+	</select>
 
 
 </mapper>

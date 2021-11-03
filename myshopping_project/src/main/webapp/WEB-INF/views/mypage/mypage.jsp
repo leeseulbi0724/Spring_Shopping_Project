@@ -26,7 +26,7 @@
 		
 		<div class="info_div">
 			<div class="info_text">
-				<p>이슬비님의<br><span>회원등급은 일반회원등급 입니다.</span></p>
+				<p>${session_name }님의<br><span>회원등급은 일반회원등급 입니다.</span></p>
 				<a href="#">등급혜택보기</a>
 			</div>
 			<div class="info_img">
