@@ -2,6 +2,7 @@ package com.myspring.myshopping;
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
@@ -78,8 +79,11 @@ public class MemberController {
 		MemberVO mvo = MemberService.getLoginResult(vo);
 		boolean pwCheck = pwdEncoder.matches(vo.getPass(), mvo.getPass());
 		
+		 HttpSession session = request.getSession(); //技记 积己
+		
 		if (mvo != null && pwCheck) {
 			result = true;
+			session.setAttribute("session_id", vo.getId());
 		}		
 		
 		return result;

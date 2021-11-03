@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+  <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
 <!DOCTYPE html>
 <html>
 <head>
@@ -133,8 +134,14 @@
 				<div class="my">
 					<ul>
 						<li><a href="index.do"><img src="http://localhost:9000/myshopping/images/home.png" class="home"></a></li>
-						<li><a href="login.do">로그인</a></li>
-						<li><a href="join.do">회원가입</a></li>
+						<c:if test = "${empty session_id }">
+							<li><a href="login.do">로그인</a></li>
+							<li><a href="join.do">회원가입</a></li>
+						</c:if>
+						<c:if test = "${!empty session_id}">
+							<li><a>안녕하세요! ${session_id }님</a>
+							<li><a href="mypage.do">마이페이지</a>
+						</c:if>
 						<li><a href="#"><b>공지사항</b></a></li>
 						<li><a href="#"><b>EVENT</b></a></li>
 					</ul>
