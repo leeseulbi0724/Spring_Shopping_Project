@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,29 +29,26 @@
 			<div class="내가보유한쿠폰">
 				<p>내가 보유한 쿠폰</p>
 				<ul>
-					<li>사용가능한 쿠폰 <strong>1</strong>장</li>
+					<li>사용가능한 쿠폰 <strong>${size }</strong>장</li>
 					<li>종료된 쿠폰</li>
 				</ul>
-				<div class="coupon_div">
-					<p>신규가입</p>
-					<p><strong>2,000</strong>원 할인</p>
-					<p>10,000원 이상 구매시<br>2021.10.11~2021.11.11까지</p>
-				</div>
-				<div class="coupon_div">
-					<p>신규가입</p>
-					<p><strong>2,000</strong>원 할인</p>
-					<p>10,000원 이상 구매시<br>2021.10.11~2021.11.11까지</p>
-				</div>
-				<div class="coupon_div">
-					<p>신규가입<span>사용완료</span></p>
-					<p><strong>2,000</strong>원 할인</p>
-					<p>10,000원 이상 구매시<br>2021.10.11~2021.11.11까지</p>
-				</div>
-				<div class="coupon_div">
-					<p>신규가입</p>
-					<p><strong>2,000</strong>원 할인</p>
-					<p>10,000원 이상 구매시<br>2021.10.11~2021.11.11까지</p>
-				</div>
+				<c:forEach var = "vo"  items="${list}" >	
+					<div class="coupon_div">
+						<c:if test = "${vo.cing eq 'Y' }">
+							<p>${vo.cname }</p>
+						</c:if>
+						<c:if test = "${vo.cing eq 'N' }">
+							<p>${vo.cname }<span>사용완료</span></p>
+						</c:if>
+						<c:if test = "${vo.coption eq 'W'}">
+							<p><strong>${vo.cprice }</strong>원 할인</p>
+						</c:if>
+						<c:if test = "${vo.coption eq 'P'}">
+							<p><strong>${vo.cprice }</strong>% 할인</p>
+						</c:if>					
+						<p>${vo.cinfo }<br>${vo.cstart } ~ ${vo.cend }까지</p>
+					</div>
+				</c:forEach>
 			</div>
 		</div>	
 	</div>

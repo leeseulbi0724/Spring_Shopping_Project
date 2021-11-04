@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.coupon">
+
+	<insert id="new_coupon" parameterType="java.lang.String">
+		insert into myshop_coupon values(#{id}, 'C'||sequ_myshop_coupon.nextval, '신규가입', '5000', 'W', '10,000원 이상 구매시', sysdate, add_months(sysdate, +1), 'Y' )
+	</insert>
+	
+	<select id="coupon_result" parameterType="java.lang.String" resultType="com.myshop.vo.CouponVO">
+		select * from myshop_coupon where id = #{id} order by cstart desc
+	</select>
+
+</mapper>

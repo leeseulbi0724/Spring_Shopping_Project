@@ -5,7 +5,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.myshop.service.CouponService;
 import com.myshop.service.MemberService;
 import com.myshop.vo.MemberVO;
 
@@ -25,6 +25,8 @@ public class MemberController {
 	
 	@Autowired
 	private MemberService MemberService;
+	@Autowired
+	private CouponService CouponService;
 	
 	//회원가입
 	@RequestMapping(value="/join.do")
@@ -43,6 +45,9 @@ public class MemberController {
 		boolean result = MemberService.getJoinResult(vo);
 		
 		if (result) {
+			//신규가입 쿠폰 발행
+			CouponService.getNewCoupon(vo.getId());
+			
 			mv.setViewName("member/success");
 		} else {
 			mv.setViewName("member/fail");

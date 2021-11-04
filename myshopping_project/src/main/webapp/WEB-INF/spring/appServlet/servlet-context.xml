@@ -26,6 +26,7 @@
 	
 	<!-- Service Object -->
 	<beans:bean id="MemberService" class="com.myshop.service.MemberServiceImpl"></beans:bean>
+	<beans:bean id="CouponService" class="com.myshop.service.CouponServiceImpl"></beans:bean>
 	
 	<context:component-scan base-package="com.myspring.myshopping" />
 	<context:component-scan base-package="com.myshop.dao" />

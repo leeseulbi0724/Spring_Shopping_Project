@@ -33,7 +33,7 @@
 			 	<a href="mypage_coupon.do">
 					<div class="coupon">
 						<img src="http://localhost:9000/myshopping/images/coupon.png">
-						<p><strong>쿠폰<br>0</strong>장</p>
+						<p><strong>쿠폰<br>${size }</strong>장</p>
 					</div>
 				</a>
 				<div class="line"></div>
