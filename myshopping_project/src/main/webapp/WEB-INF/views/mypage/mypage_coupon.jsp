@@ -46,7 +46,7 @@
 						<c:if test = "${vo.coption eq 'P'}">
 							<p><strong>${vo.cprice }</strong>% 할인</p>
 						</c:if>					
-						<p>${vo.cinfo }<br>${vo.cstart } ~ ${vo.cend }까지</p>
+						<p>${vo.cinfo }<br>${vo.cstart } ~ ${vo.cend }</p>
 					</div>
 				</c:forEach>
 			</div>

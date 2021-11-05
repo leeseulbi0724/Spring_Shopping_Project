@@ -42,7 +42,7 @@
 			<ul class="menu_ul">
 				<a href="#"><li>개인정보수정</li></a>
 				<a href="#"><li>비밀번호변경</li></a>
-				<a href="#"><li>배송지관리</li></a>
+				<a href="mypage_del.do" class="del"><li>배송지관리</li></a>
 				<a href="#"><li>회원탈퇴</li></a>
 			</ul>			
 		</div>

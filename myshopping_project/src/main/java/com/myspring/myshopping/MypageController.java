@@ -8,17 +8,20 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.myshop.service.CouponService;
+import com.myshop.service.DeliveryService;
 import com.myshop.vo.CouponVO;
+import com.myshop.vo.DeliveryVO;
 
 @Controller
 public class MypageController {	
 	
 	@Autowired
 	private CouponService CouponService;
+	@Autowired
+	private DeliveryService DeliveryService;
 	
 	//마이페이지 메인화면
 	@RequestMapping(value="/mypage.do")
@@ -65,6 +68,19 @@ public class MypageController {
 	@RequestMapping(value="/mypage_order_detail.do")
 	public String mypage_order_detail() {
 		return "mypage/mypage_order_detail";
+	}
+	
+	//마이페이지 배송지관리
+	@RequestMapping(value="/mypage_del.do")
+	public ModelAndView mypage_del(HttpServletRequest request) {
+		ModelAndView mv = new ModelAndView();		
+		HttpSession session = request.getSession(); //세션 생성
+		
+		DeliveryVO vo = DeliveryService.getBasicDel((String)session.getAttribute("session_id"));
+		mv.setViewName("mypage/mypage_del");
+		mv.addObject("vo", vo);
+		
+		return mv;
 	}
 
 }
