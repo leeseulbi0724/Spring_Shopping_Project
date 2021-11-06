@@ -2,7 +2,17 @@ package com.myshop.vo;
 
 public class DeliveryVO {
 	
-	String name, addr1, addr2, hp;
+	String id, name, addr1, addr2, hp, doption;
+	
+	
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
 
 	public String getName() {
 		return name;
@@ -35,6 +45,16 @@ public class DeliveryVO {
 	public void setHp(String hp) {
 		this.hp = hp;
 	}
+
+	public String getDoption() {
+		return doption;
+	}
+
+	public void setDoption(String doption) {
+		this.doption = doption;
+	}
+	
+	
 	
 	
 

@@ -8,6 +8,8 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.myshop.service.CouponService;
@@ -76,11 +78,33 @@ public class MypageController {
 		ModelAndView mv = new ModelAndView();		
 		HttpSession session = request.getSession(); //세션 생성
 		
-		DeliveryVO vo = DeliveryService.getBasicDel((String)session.getAttribute("session_id"));
+		ArrayList<DeliveryVO> list = DeliveryService.getBasicDel((String)session.getAttribute("session_id"));
 		mv.setViewName("mypage/mypage_del");
-		mv.addObject("vo", vo);
+		mv.addObject("list", list);
 		
 		return mv;
+	}
+	
+	//마이페이지 배송지추가
+	@RequestMapping(value="/mypage_del_add.do")
+	public ModelAndView mypage_del_add() {
+		ModelAndView mv = new ModelAndView();
+		
+		mv.setViewName("mypage/mypage_del_add");
+		
+		return mv;
+	}
+	
+	//마이페이지 배송비추가 DB
+	@ResponseBody
+	@RequestMapping(value="/del_add_proc.do", method=RequestMethod.POST)
+	public boolean mypage_del_add_prod(DeliveryVO vo, HttpServletRequest request) {
+		HttpSession session = request.getSession(); //세션 생성
+		vo.setId((String)session.getAttribute("session_id"));		
+		
+		boolean result = DeliveryService.getDelAdd(vo);
+		
+		return result;
 	}
 
 }
